@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+.bg {
+  background-image: url('../../asset/background-login.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  filter: brightness(0.4);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width : auto;
+  height: auto;
+  padding: 30px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 70px;
+  background: rgb(90, 228, 26);
+  top: -5px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 5px;
+}
+
+#imgLeaf {
+  width: 30px;
+  position: absolute;
+  z-index: 1;
+  top: 1px;
+  left: 40px;
+}
+
+.container h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  color: white;
+  padding: 25px;
+}
+
+form label {
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+form label input {
+  height: 30px;
+  width: 300px;
+  padding: 5px;
+}
+
+#input-form {
+  background-color: rgba(31, 31, 31, 0.267);
+  border: none;
+  color: white;
+  font-weight: 500;
+  border-bottom: 1px solid white;
+  font-size: 16px;
+  letter-spacing: 1.15px;
+}
+
+#label {
+  margin-bottom: 10px;
+  cursor: pointer;
+  order: 1;
+}
+
+#input-form:focus {
+  outline: none;
+} 
+
+label:focus-within #label{
+  color: greenyellow;
+}
+
+#login-btn {
+  padding: 10px;
+  color: white;
+  background-color: rgb(23, 154, 60);
+  border-radius: 10px;
+  border: none;
+  width: 120px;
+  font-weight: 550;
+  font-size: 1em;
+}
+#login-btn:hover {
+  background-color: rgb(87, 225, 28);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: greenyellow;
+}
+
+#outerP {
+  color: white;
+  text-align: center;
+  font-weight: 500;
+}
+/*Break Point*/
+@media only screen and (max-width: 500px) {
+  
+  .container {
+    width: 90%;
+  }
+
+  form label input {
+    width: 140%;
+  }
+
+  form {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  
+  .container {
+    width: 90%;
+  }
+
+  form label input {
+    width: 120%;
+  }
+
+  form {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  
+  .container {
+    width: 90%;
+  }
+
+  form label input {
+    width: 100%;
+  }
+
+  form {
+    padding: 0;
+  }
+
+  #outerP {
+    margin-top: 15px;
+  }
+
+}
