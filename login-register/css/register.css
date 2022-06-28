@@ -2,7 +2,7 @@
 
 html, body {
   height: 100%;
-  min-height: 450px;
+  min-height: 550px;
   overflow-x: hidden;
 }
 
@@ -17,7 +17,6 @@ html, body {
  width: 60%;
  height: 100%;
  background-image: url('../../asset/background-login.jpg');
- filter: brightness(0.5);
  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -38,7 +37,6 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
 }
 
 .right h1 {
@@ -119,50 +117,52 @@ a {
 
 #home-btn {
   width: 100px;
-  border: 1px solid white;
-  background: none;
-  color: white;
+  background-color: greenyellow;
+  color: black;
+  border: none;
   position: absolute;
+  padding: 10px;
   top: 10px;
   left: 20px;
-  padding: 10px;
   font-weight: bolder;
   animation: rotate 1s;
 }
 
+.card {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+}
+
 #loginP {
-  position: absolute;
   right: 140px;
   top: 20px;
   z-index: 1;
   font-weight: 500;
   animation: rotate2 1s;
+  margin-right: 10px;
+  color: black;
 }
 
 #login-btn {
   width: 100px;
-  border: 1px solid black;
+  border: none;
   background: none;
   color: black;
-  position: absolute;
-  top: 10px;
-  right: 20px;
   padding: 10px;
   font-weight: bolder;
   z-index: 1;
   animation: opaCity 1.5s;
+  background-color: greenyellow;
 }
 
 #login-btn:hover {
-  background-color: greenyellow;
-  color: black;
   cursor: pointer;
-  border: none;
 }
 
 #home-btn:hover {
-  background-color: greenyellow;
-  color: black;
   cursor: pointer;
   border: none;
 }
@@ -209,6 +209,7 @@ a {
       transform: rotate(360deg);
     }
 }
+
 @keyframes rotate2{
   0% {
     opacity: 0;
@@ -223,7 +224,7 @@ a {
 
 @media only screen and (max-width: 1476px) {
   .left {
-    height: 130%;
+    height: 150%;
   }
 
   .right  {
@@ -232,17 +233,13 @@ a {
 }
 
 @media only screen and (max-width: 1376px) {
-  .left {
-    height: 140%;
-  }
-
   .right {
     margin-top: 300px;
   }
 }
 
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1124px) {
   #loginP {
     display: none;
   }
@@ -266,11 +263,6 @@ a {
 
   form {
     width: 100%;
-  }
-
-  #login-btn {
-    border: 1px solid white;
-    color: white;
   }
 }
 
